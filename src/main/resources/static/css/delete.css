@@ -1,0 +1,53 @@
+body {
+    font-family: "Arial", sans-serif;
+    margin: 40px;
+
+}
+
+.delete-container{
+    width: 400px;
+    height: 270px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    border: 2px solid rgba(194, 194, 194, 0.82);
+    border-radius: 10px;
+    background-color: rgb(239, 239, 239);
+    padding: 20px;
+}
+.delete{
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+.input-box{
+    margin-top:5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 395px;
+    height: 25px;
+    border: 1px solid rgb(164, 164, 164);
+    border-radius: 5px;
+}
+
+.submit input[type=submit]{
+    background-color: #262525;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 10px 2px 20px 2px;
+    cursor: pointer;
+    width: 400px;
+    font-size: 20px;
+}
+.password{
+    margin-bottom: 3px;
+}
+span{
+    margin-top:7px;
+    color: red;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Page</title>
+    <link rel="stylesheet" th:href="@{/css/update.css}">
+</head>
+<body>
+<form th:action="@{/boards/update}" method="post" th:object="${board}">
+    <div class="update-container">
+        <div class="update">
+            <h1>Update Board</h1>
+        </div>
+        <input type="hidden" name="id" th:field="*{id}">
+        <div class="name">
+            <br><label for="name">Name</label>
+            <br><input class="input-box" type="text" id="name" th:field="*{name}" required/>
+        </div>
+        <div class="title">
+            <br><label for="title">Title</label>
+            <br><input class="input-box" type="text" id="title" th:field="*{title}" required/>
+        </div>
+        <div class="content">
+            <br><label for="content">Content</label>
+            <br><textarea class="input-box" id="content" th:field="*{content}"></textarea>
+        </div>
+        <div class="password">
+            <br><label for="password">Password (for verification)</label>
+            <br><input class="input-box" type="password" id="password" th:field="*{password}"/>
+        </div>
+        <span class="error" th:if="${errorMessage}" th:text="${errorMessage}"></span>
+        <div class = "submit">
+            <input type="submit" value="Update">
+        </div>
+    </div>
+</form>
+</body>
+</html>

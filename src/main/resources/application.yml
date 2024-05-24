@@ -1,0 +1,11 @@
+spring:
+  application:
+    name:boardProject
+  datasource:
+    url: jdbc:mysql://localhost:3306/exampledb
+    username: luready
+    password: dldbwns6420
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+server:
+  port: 80

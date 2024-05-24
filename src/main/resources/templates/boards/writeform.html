@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>WriteForm</title>
+    <link rel="stylesheet" th:href="@{/css/writeform.css}">
+</head>
+<body>
+<form th:action="@{/boards/write}" method="post" th:object="${board}">
+    <div class="create-container">
+        <div class = "create">
+            <h3>Create a New Board</h3>
+        </div>
+<!--        <input type="date" th:field="*{created_at}">-->
+
+        <div class = "name">
+            <br><label for="name">Name</label>
+            <br><input class="input-box" type="text" id="name" th:field="*{name}" required/>
+        </div>
+        <div class = "title">
+            <br><label for="title">Title</label>
+            <br><input class="input-box" type="text" id="title" th:field="*{title}" required/>
+        </div>
+        <div class = "content">
+            <br><label for="content">Content</label>
+            <br><textarea class="input-box" id="content" th:field="*{content}"></textarea>
+        </div>
+        <div class = "password">
+            <br><label for="password">Password</label>
+            <br><input class="input-box" type="password" id="password" th:field="*{password}"/>
+        </div>
+        <div class = "submit">
+            <input type="submit" value="Create">
+        </div>
+        <input type="hidden" name="created_at" th:field="*{created_at}">
+    </div>
+</form>
+
+</body>
+</html>
